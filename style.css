@@ -128,3 +128,17 @@ ul li span.delete {
 }
 
 
+@media (max-width: 480px) {
+    .To-do-app {
+        padding: 20px 15px 50px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    input {
+        font-size: 13px;
+    }
+}
