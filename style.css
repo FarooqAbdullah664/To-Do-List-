@@ -51,15 +51,15 @@ body {
   padding: 10px 15px;
   margin-bottom: 25px;
 }
-
 input#input-box {
   flex: 1 1 200px;
   border: none;
   outline: none;
   background: transparent;
-  padding: 10px 15px;
-  font-size: 16px;
+  padding: 6px 10px;  
+  font-size: 14px;    
   min-width: 120px;
+  max-width: 300px;   
 }
 
 input#input-box:focus {
