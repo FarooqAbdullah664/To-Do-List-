@@ -9,86 +9,101 @@
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(135deg, #153677, #4e085f);
-    padding: 10px;
+    padding: 20px;
 }
 
 .To-do-app {
-    width: 50%;
-    min-height: 200px;
+    width: 100%;
+    max-width: 600px;
     background: white;
     border-radius: 10px;
-    padding: 40px 30px 70px;
-    margin: 100px auto 20px;
+    padding: 30px 20px 60px;
+    margin: 60px auto 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .To-do-app h2 {
     color: #002765;
     display: flex;
     align-items: center;
+    gap: 10px;
     margin-bottom: 20px;
+    font-size: 24px;
 }
 
 .To-do-app h2 img {
     width: 30px;
-    margin-left: 10px;
+    height: auto;
 }
 
 .row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
     background: #edeef0;
     border-radius: 30px;
-    padding-left: 20px;
+    padding: 10px 15px;
     margin-bottom: 25px;
-    gap: 10px;
-    flex-wrap: wrap;
 }
 
 input {
-    flex: 1;
+    flex: 1 1 200px;
     border: none;
     outline: none;
     background: transparent;
     padding: 10px;
     font-size: 14px;
-    min-width: 150px;
+    min-width: 120px;
 }
 
 button {
+    flex-shrink: 0;
     border: none;
     outline: none;
-    padding: 16px 50px;
+    padding: 12px 30px;
     background: #ff5945;
-    color: #e2dbe3;
+    color: #fff;
     font-size: 16px;
     border-radius: 40px;
     cursor: pointer;
-    white-space: nowrap;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e14c3a;
+}
+
+ul {
+    list-style: none;
+    width: 100%;
 }
 
 ul li {
     position: relative;
-    list-style: none;
-    font-size: 17px;
+    font-size: 16px;
     padding: 12px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    transition: background 0.2s;
+}
+
+ul li:hover {
+    background: #f4f4f4;
 }
 
 ul li::before {
     content: "";
     position: absolute;
     background-image: url('./images/unchecked.png');
-    height: 28px;
-    width: 28px;
+    height: 24px;
+    width: 24px;
     background-size: cover;
-    border-radius: 50%;
     background-position: center;
     top: 12px;
-    left: 8px;
+    left: 12px;
+    border-radius: 50%;
 }
 
 ul li.checked {
@@ -102,14 +117,15 @@ ul li.checked::before {
 
 ul li span {
     position: absolute;
-    top: 5px;
-    height: 40px;
-    width: 40px;
-    font-size: 22px;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+    font-size: 18px;
     color: #555;
     text-align: center;
-    line-height: 40px;
+    line-height: 30px;
     border-radius: 50%;
+    transition: background 0.2s;
 }
 
 ul li span:hover {
@@ -118,38 +134,8 @@ ul li span:hover {
 
 ul li span.edit {
     right: 45px;
-    font-size: 18px;
 }
 
 ul li span.delete {
-    right: 0px;
-    font-size: 22px;
+    right: 10px;
 }
-
-/* ✅ Responsive Design - Mobile Screens */
-@media (max-width: 768px) {
-    .To-do-app {
-        width: 80%;
-        padding: 30px 20px 60px;
-        margin: 80px auto 20px;
-    }
-
-    .row {
-        flex-direction: column;
-        align-items: stretch;
-        padding-left: 15px;
-        gap: 15px;
-    }
-
-    input {
-        width: 100%;
-        font-size: 14px;
-    }
-
-    button {
-        width: 100%;
-        font-size: 15px;
-        padding: 14px;
-    }
-}
-
